@@ -1,2 +1,4 @@
-# poker
-Poker Prototype
+# Poker
+Django/Python/JavaScript Poker Prototype
+
+
