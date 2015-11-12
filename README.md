@@ -1,4 +1,4 @@
-# Poker
-Django/Python/JavaScript Poker Prototype
+# Casino
+Django/Python/JavaScript Casino Prototype
 
 
