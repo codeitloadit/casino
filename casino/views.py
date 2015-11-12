@@ -1,9 +1,10 @@
 from django.contrib import auth, messages
-from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.template.response import TemplateResponse
+
+from accounts.models import Player
 
 
 def index(request):
@@ -22,7 +23,7 @@ def register(request):
             error = messages.error(request, 'Passwords did not match!') or True
         if not error:
             try:
-                User.objects.create_user(username=username, password=password)
+                Player.objects.create_user(username=username, password=password)
             except IntegrityError:
                 error = messages.error(request, 'That username is already taken!') or True
         if not error:
